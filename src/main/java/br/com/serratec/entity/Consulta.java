@@ -2,7 +2,6 @@ package br.com.serratec.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
 import br.com.serratec.enumerated.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -26,10 +25,10 @@ public class Consulta {
 	private Status status;
 	
 	@ManyToOne
-	private String paciente;
+	private Paciente paciente;
 	
 	@ManyToOne
-	private String medico; 
+	private Medico medico; 
 	
 	public Long getId() {
 		return id;
@@ -55,16 +54,16 @@ public class Consulta {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	public String getPaciente() {
+	public Paciente getPaciente() {
 		return paciente;
 	}
-	public void setPaciente(String paciente) {
+	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-	public String getMedico() {
+	public Medico getMedico() {
 		return medico;
 	}
-	public void setMedico(String medico) {
+	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
 	

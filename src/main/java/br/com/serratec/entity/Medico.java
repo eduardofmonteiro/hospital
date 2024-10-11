@@ -23,10 +23,8 @@ public class Medico {
 	@Email
 	private String email;
 
-	//@Size(max = 11, min = 11)
-	//@Column(nullable = false, length = 11)
 	@NotBlank
-	@Pattern(regexp = "\\(\\d{2}\\) \\d{4,5}-\\d{4}", message = "O telefone deve seguir o formato (XX) XXXXX-XXXX")
+	@Pattern(regexp = "\\d{11}")
 	private String telefone;
 
 	private Long crm;

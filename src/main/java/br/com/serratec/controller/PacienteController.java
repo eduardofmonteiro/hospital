@@ -40,7 +40,7 @@ public class PacienteController {
     }
 	
 	@PutMapping("{id}")
-    public Paciente alterar(@PathVariable Integer id, @RequestBody Paciente p) {
+    public Paciente alterar(@PathVariable Long id, @RequestBody Paciente p) {
         for (int i = 0; i < pacientes.size(); i++) {
             if (pacientes.get(i).getId().equals(id)) {
             	pacientes.set(i, p);
@@ -49,4 +49,5 @@ public class PacienteController {
         }
         return null;
     }	
+
 }
