@@ -29,7 +29,7 @@ public class Medico {
 	@Pattern(regexp = "\\(\\d{2}\\) \\d{4,5}-\\d{4}", message = "O telefone deve seguir o formato (XX) XXXXX-XXXX")
 	private String telefone;
 
-	private String crm;
+	private Long crm;
 	private String especialidade;
 	
 	public Long getId() {
@@ -48,11 +48,11 @@ public class Medico {
 		this.nome = nome;
 	}
 
-	public String getCrm() {
+	public Long getCrm() {
 		return crm;
 	}
 
-	public void setCrm(String crm) {
+	public void setCrm(Long crm) {
 		this.crm = crm;
 	}
 
